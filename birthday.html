@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Special Message</title>
+  <style>
+    body {
+      background: #ff69b4;
+      font-family: 'Comic Sans MS', sans-serif;
+      text-align: center;
+      color: white;
+      margin: 0;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 38px;
+      margin-top: 12%;
+      text-shadow: 2px 2px 8px #d63384;
+      line-height: 1.6;
+    }
+    .emoji {
+      font-size: 32px;
+    }
+    button {
+      padding: 10px 25px;
+      background: white;
+      color: #ff1493;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 🎶 Music player -->
+  <audio id="bdayMusic" loop>
+    <source src="DIVINE - Baazigar feat. Armani White  Prod. by Karan Kanchan  Official Music Video.mp3" type="audio/mpeg">
+  </audio>
+
+  <h1>
+    shayla u are growing 🌸 and i hope you achieve all that u prayed for 💫<br>
+    and all that you want but forgot to pray for 💕<br>
+    may this year make all ur worries go away 🌈<br>
+    and make ur delulus come trululu 🦋💖<br><br>
+    i hope we stay friends for a long time hehe 😌<br>
+    and stop being pmo now u old 😤😡😠
+  </h1>
+
+  <div class="emoji">🎂🎉💐💖🌸🎈🌟✨</div>
+
+  <script>
+    // wait for page to load, then start song at 00:50
+    window.addEventListener('load', () => {
+      const audio = document.getElementById('bdayMusic');
+      audio.currentTime = 50; // start at 00:50
+      audio.play().catch(() => {
+        // if autoplay blocked, play on click
+        document.body.addEventListener('click', () => {
+          audio.play();
+        }, { once: true });
+      });
+    });
+  </script>
+</body>
+</html>
